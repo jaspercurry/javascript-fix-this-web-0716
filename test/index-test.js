@@ -1,3 +1,4 @@
+"use strict";
 describe('index', function() {
   describe('cook functions', function() {
     before(function() {
@@ -30,8 +31,7 @@ describe('index', function() {
         this.clock.tick(3000)
 
         expect(serveSpy).toHaveBeenCalledWith(
-          cake,
-          ["Happy Eating!", cake.customer]
+          cake, ["Happy Eating!", cake.customer]
         )
       })
     })
@@ -40,7 +40,8 @@ describe('index', function() {
       it('calls the update function', function() {
         bake.call(pie, update)
         expect(
-          document.getElementById("pie").getElementsByClassName("status")[0].innerText
+          document.getElementById("pie").getElementsByClassName(
+            "status")[0].innerText
         ).toMatch(/Baking at/)
       })
 
@@ -60,7 +61,8 @@ describe('index', function() {
       it('calls the update function', function() {
         cool.call(pie, update)
         expect(
-          document.getElementById("pie").getElementsByClassName("status")[0].innerText
+          document.getElementById("pie").getElementsByClassName(
+            "status")[0].innerText
         ).toMatch(/cool!/)
       })
 
@@ -81,7 +83,8 @@ describe('index', function() {
       it('calls the update function', function() {
         mix.call(pie, update)
         expect(
-          document.getElementById("pie").getElementsByClassName("status")[0].innerText
+          document.getElementById("pie").getElementsByClassName(
+            "status")[0].innerText
         ).toMatch(/Mixing/)
       })
 
